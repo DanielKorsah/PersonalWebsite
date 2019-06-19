@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>
+        Dan's Home Page
+    </title>
+    <!--bootstrap CCS, JS, PopperJS and jQuery-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCb-jpRATYHS-z_2StRtI0hrXZAmt3zD_E",
+            authDomain: "pong-973da.firebaseapp.com",
+            databaseURL: "https://pong-973da.firebaseio.com",
+            projectId: "pong-973da",
+            storageBucket: "",
+            messagingSenderId: "381597890847",
+            appId: "1:381597890847:web:3540d2a6cd135009"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- the game script -->
+    <script src="pong.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+        <div class="d-flex row justify-content-center">
+            <h1>Pong</h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="d-flex row justify-content-center">
+            <canvas id="canvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
