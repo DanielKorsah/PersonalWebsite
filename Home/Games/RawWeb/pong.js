@@ -32,8 +32,8 @@ class player {
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
-let p1 = new player(50, 400, "#01F");
-let p2 = new player(950, 400, "#B00");
+let p1 = new player(50, 400, "blue");
+let p2 = new player(950, 400, "red");
 
 // create a bullet
 function Bullet(I) {
