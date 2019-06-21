@@ -1,3 +1,42 @@
+
+
+// web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCb-jpRATYHS-z_2StRtI0hrXZAmt3zD_E",
+    authDomain: "pong-973da.firebaseapp.com",
+    databaseURL: "https://pong-973da.firebaseio.com",
+    projectId: "pong-973da",
+    storageBucket: "pong-973da.appspot.com",
+    messagingSenderId: "381597890847",
+    appId: "1:381597890847:web:3540d2a6cd135009"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+console.log(firebase)
+
+//firestore database
+var database = firebase.database();
+
+
+class entry {
+    constructor() {
+        this.blueY = sizey / 2;
+        this.redY = sizey / 2;
+        this.ballX = sizex / 2;
+        this.ballY = sizey / 2;
+        this.playerJoined = false;
+
+    }
+}
+
+var randomID = function () {
+    return Math.random().toString(36).replace('0.', '');
+}
+
+
+
+
 // room size
 var sizex = 1000;
 var sizey = 500;
@@ -5,12 +44,19 @@ var sizey = 500;
 var xOffset = 0;
 var yOffset = 0;
 
+id = randomID()
+var ref = database.ref(id);
+var e = new entry();
+console.log(e);
+ref.push(e);
+
 // bullets
 var playerBullets = [];
 
 // 2D canvas
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
+
 
 // create background window (500x500 white square)
 ctx.fillStyle = "black";
@@ -52,7 +98,7 @@ function Bullet(I) {
 
     // draw bullet
     I.draw = function () {
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = "yellow";
         ctx.fillRect(this.x, this.y, this.width, this.height);
     };
 
@@ -91,7 +137,7 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-// manga key strokes (key up)
+// manage key strokes (key up)
 document.addEventListener('keyup', function (event) {
     if (event.keyCode == 87) {// left arrow pressed
         // move left
@@ -110,8 +156,32 @@ document.addEventListener('keyup', function (event) {
 setInterval(draw, 1);
 
 
+function gotData(data) {
+    var lobby = data.val();
+    var keys = Object.keys(lobby);
+    for (let i = 0; i < keys.length; i++) {
+        var k = keys[i];
+        var bx = lobby[k].ballX;
+        console.log(keys[0]);
+        console.log(lobby[k]);
+        console.log(bx);
+    }
+    var f = lobby[Object.keys(lobby)[0]];
+    console.log(f.playerJoined);
+}
+
+function errData(err) {
+    console.error("Data Error! : " + err);
+}
+
+var gameData = database.ref(id);
+gameData.on("value", gotData, errData);
+
 // main function
 function draw() {
+
+
+
     // clear screen
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, sizex, sizey);
@@ -120,24 +190,15 @@ function draw() {
     p1.x = p1.x + xOffset;
     p1.y = p1.y + yOffset;
 
-    // update bullets
-    playerBullets.forEach(function (bullet) {
-        // check that bullet is within canvas
-        bullet.update()
-    });
+    //update other player
 
-    // remove inactive bullets from bullet vector
-    playerBullets = playerBullets.filter(function (bullet) {
-        return bullet.active;
-    });
+
+
+
 
     // draw player
     p1.draw();
     p2.draw();
 
-    // draw bullets
-    playerBullets.forEach(function (bullet) {
-        // draw bullet
-        bullet.draw();
-    });
+
 }
