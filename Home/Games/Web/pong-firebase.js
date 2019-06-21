@@ -36,12 +36,13 @@ function gotData(data) {
         var k = keys[i];
         var bx = lobby[k].ballX;
         console.log(keys[0]);
-        console.log(lobby[k]);
-        console.log(bx);
+        //console.log(lobby[k]);
+        //console.log(bx);
     }
     var f = lobby[Object.keys(lobby)[0]];
-    console.log(f.playerJoined);
-    return lobby[keys[0]];
+    //console.log(f.playerJoined);
+    GameState = lobby[keys[0]];
+    console.log(GameState);
 
 }
 

@@ -16,6 +16,6 @@ function setID() {
 function join() {
     RoomID = document.getElementById("joinID").value;
     var ref = database.ref(RoomID);
-    var game = ref.once("value", gotData, errData);
-    console.log(game);
+    ref.once("value", gotData, errData);
+    console.log(GameState);
 }

@@ -124,7 +124,7 @@ setInterval(draw, 1);
 
 // main function
 function draw() {
-
+    //console.log(GameState);
 
 
     // clear screen
