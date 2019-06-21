@@ -38,18 +38,9 @@
     <!-- <script>console.log(firebase)</script> -->
 
 
-    <script>
-        var RoomID = "";
-        var randomID = function () {
-            return Math.random().toString(36).replace('0.', '');
-        }
-        var setID = function () {
-            RoomID = randomID();
-            document.getElementById("lobbyID").innerHTML = RoomID;
-        }
-    </script>
+    <script>var RoomID = "";</script>
     <script src="pong-firebase.js"></script>
-
+    <script src="pong-session.js"></script>
     <!-- the game script -->
     <script src="pong-main.js" defer></script>
 
@@ -88,7 +79,21 @@
         }
 
         #host {
-            margin: 50px 10px 30px 5%;
+            margin: 50px 10px 10px 5%;
+            width: 50px
+        }
+
+        #join {
+            margin: 10px 10px 10px 5%;
+            width: 50px
+        }
+
+        #joinID {
+            width: 120px
+        }
+
+        #indicator {
+            margin: 30px 10px 10px 5%;
         }
     </style>
 
@@ -96,6 +101,17 @@
         <button class=column type="button" id="host" onclick="setID()">Host</button>
         <div class=column>Lobby ID:</div>
         <div class=column id="lobbyID">###</div>
+    </section>
+
+    <section>
+        <button class=column type="button" id="join" onclick="join()">Join</button>
+        <div class=column>Lobby ID:</div>
+        <input type="text" id="joinID"><br>
+    </section>
+
+    <section>
+        <div class=column id=indicator>Lobby: </div>
+        <div class=column>Offline</div>
     </section>
 
 </body>

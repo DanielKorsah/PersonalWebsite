@@ -41,11 +41,10 @@ function gotData(data) {
     }
     var f = lobby[Object.keys(lobby)[0]];
     console.log(f.playerJoined);
+    return lobby[keys[0]];
+
 }
 
 function errData(err) {
     console.error("Data Error! : " + err);
 }
-
-var ref = database.ref(RoomID);
-ref.on("value", gotData, errData);

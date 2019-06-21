@@ -78,10 +78,7 @@ document.addEventListener('keydown', function (event) {
         // move left
         xOffset = 0;
         yOffset = -p1.speed;
-        var ref = database.ref(RoomID);
-        var e = new entry();
-        console.log(e);
-        ref.push(e);
+
     }
 
     else if (event.keyCode == 83) {// right arrow pressed
