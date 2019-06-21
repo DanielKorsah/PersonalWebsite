@@ -35,13 +35,20 @@
     <!-- The database module -->
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
 
-
-    <!--lmao security-->
-    <script>
-
-    </script>
-
     <!-- <script>console.log(firebase)</script> -->
+
+
+    <script>
+        var RoomID = "";
+        var randomID = function () {
+            return Math.random().toString(36).replace('0.', '');
+        }
+        var setID = function () {
+            RoomID = randomID();
+            document.getElementById("lobbyID").innerHTML = RoomID;
+        }
+    </script>
+    <script> src = "firebase.js"</script>
 
     <!-- the game script -->
     <script src="pong.js" defer></script>
@@ -86,7 +93,7 @@
     </style>
 
     <section>
-        <button class=column type="button" id="host">Host</button>
+        <button class=column type="button" id="host" onclick="setID()">Host</button>
         <div class=column>Lobby ID:</div>
         <div class=column id="lobbyID">###</div>
     </section>

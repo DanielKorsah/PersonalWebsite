@@ -1,42 +1,5 @@
 
 
-// web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCb-jpRATYHS-z_2StRtI0hrXZAmt3zD_E",
-    authDomain: "pong-973da.firebaseapp.com",
-    databaseURL: "https://pong-973da.firebaseio.com",
-    projectId: "pong-973da",
-    storageBucket: "pong-973da.appspot.com",
-    messagingSenderId: "381597890847",
-    appId: "1:381597890847:web:3540d2a6cd135009"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-console.log(firebase)
-
-//firestore database
-var database = firebase.database();
-
-
-class entry {
-    constructor() {
-        this.blueY = sizey / 2;
-        this.redY = sizey / 2;
-        this.ballX = sizex / 2;
-        this.ballY = sizey / 2;
-        this.playerJoined = false;
-
-    }
-}
-
-var randomID = function () {
-    return Math.random().toString(36).replace('0.', '');
-}
-
-
-
-
 // room size
 var sizex = 1000;
 var sizey = 500;
@@ -44,11 +7,7 @@ var sizey = 500;
 var xOffset = 0;
 var yOffset = 0;
 
-id = randomID()
-var ref = database.ref(id);
-var e = new entry();
-console.log(e);
-ref.push(e);
+
 
 // bullets
 var playerBullets = [];
@@ -119,12 +78,23 @@ document.addEventListener('keydown', function (event) {
         // move left
         xOffset = 0;
         yOffset = -p1.speed;
+        var ref = database.ref(RoomID);
+        var e = new entry();
+        console.log(e);
+        ref.push(e);
     }
 
     else if (event.keyCode == 83) {// right arrow pressed
         // move right
         xOffset = 0;
         yOffset = p1.speed;
+
+        var ref = database.ref(RoomID);
+        var e = new entry();
+        e.redY = -20;
+        e.playerJoined = true;
+        console.log(e);
+        ref.update(e);
     }
 
     else if (event.keyCode == 32) {// space bar
@@ -154,28 +124,6 @@ document.addEventListener('keyup', function (event) {
 
 // call draw0 function every 1ms
 setInterval(draw, 1);
-
-
-function gotData(data) {
-    var lobby = data.val();
-    var keys = Object.keys(lobby);
-    for (let i = 0; i < keys.length; i++) {
-        var k = keys[i];
-        var bx = lobby[k].ballX;
-        console.log(keys[0]);
-        console.log(lobby[k]);
-        console.log(bx);
-    }
-    var f = lobby[Object.keys(lobby)[0]];
-    console.log(f.playerJoined);
-}
-
-function errData(err) {
-    console.error("Data Error! : " + err);
-}
-
-var gameData = database.ref(id);
-gameData.on("value", gotData, errData);
 
 // main function
 function draw() {
