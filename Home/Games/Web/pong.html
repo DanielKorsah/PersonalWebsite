@@ -51,23 +51,45 @@
 
 <body>
 
-    <ol class="breadcrumb" style=font-size:30px>
-        <li><a href="../../index.html">Home</a></li>/
-        <li><a href="../hub.html">Games</a></li>/
-        <li class="active">JS-Pong</li>
-    </ol>
+    <header>
+        <ol class="breadcrumb" style=font-size:30px>
+            <li><a href="../../index.html">Home</a></li>/
+            <li><a href="../hub.html">Games</a></li>/
+            <li class="active">JS-Pong</li>
+        </ol>
+    </header>
+    <section>
+        <div class="container">
+            <div class="d-flex row justify-content-center">
+                <h1 style=font-size:50px>Pong</h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="d-flex row justify-content-center">
+                <canvas id="canvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-        <div class="d-flex row justify-content-center">
-            <h1 style=font-size:50px>Pong</h1>
-        </div>
-    </div>
-    <br><br>
-    <div class="container">
-        <div class="d-flex row justify-content-center">
-            <canvas id="canvas" width="1000" height="500" style="border:1px solid #000000;"></canvas>
-        </div>
-    </div>
+    <br>
+
+    <style>
+        .column {
+            margin: 50px 10px 30px 10px;
+            display: inline;
+        }
+
+        #host {
+            margin: 50px 10px 30px 5%;
+        }
+    </style>
+
+    <section>
+        <button class=column type="button" id="host">Host</button>
+        <div class=column>Lobby ID:</div>
+        <div class=column id="lobbyID">###</div>
+    </section>
 
 </body>
 
