@@ -5,7 +5,9 @@ var randomID = function () {
 
 function setID() {
     RoomID = randomID();
-    document.getElementById("lobbyID").innerHTML = RoomID;
+    document.getElementById("lobbyID").innerText = RoomID;
+    if (RoomID.includes("<"))
+        console.log("nice try");
 
     var ref = database.ref(RoomID);
     var e = new entry();
