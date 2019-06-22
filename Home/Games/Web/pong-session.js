@@ -6,9 +6,6 @@ var randomID = function () {
 function setID() {
     RoomID = randomID();
     document.getElementById("lobbyID").innerText = RoomID;
-    if (RoomID.includes("<"))
-        console.log("nice try");
-
     var ref = database.ref(RoomID);
     var e = new entry();
     console.log(e);
@@ -16,8 +13,15 @@ function setID() {
 }
 
 function join() {
-    RoomID = document.getElementById("joinID").value;
-    var ref = database.ref(RoomID);
-    ref.once("value", gotData, errData);
+
+    if (document.getElementById("joinID").value.includes("<")) {
+        alert("Nice Try");
+    }
+    else {
+        RoomID = document.getElementById("joinID").value;
+        var ref = database.ref(RoomID);
+        ref.once("value", gotData, errData);
+    }
+
     console.log(GameState);
 }
