@@ -94,14 +94,7 @@ document.addEventListener('keydown', function (event) {
         ref.update(e);
     }
 
-    else if (event.keyCode == 32) {// space bar
-        // fire bullet
-        p1.push(Bullet({
-            speed: 5,
-            x: p1.x + p1.width / 2,
-            y: p1.y + p1.height / 2
-        }));
-    }
+
 });
 
 // manage key strokes (key up)
