@@ -78,12 +78,12 @@
         }
 
         .topLeft {
-            margin: 50px 10px 10px 5%;
+            margin: 50px 10px 5px 5%;
             width: 50px
         }
 
         .left {
-            margin: 10px 10px 10px 5%;
+            margin: 10px 10px 5px 5%;
             width: 50px
         }
 
@@ -94,10 +94,15 @@
         #indicator {
             margin: 30px 10px 10px 5%;
         }
+
+        #disconnect {
+            width: 100px;
+            background-color: rgb(241, 106, 106)
+        }
     </style>
 
     <section>
-        <button class="column topLeft" type="button" onclick="setID()">Host</button>
+        <button class="column left" type="button" onclick="setID()">Host</button>
         <div class=column>Lobby ID:</div>
         <div class=column id="lobbyID">###</div>
     </section>
@@ -111,6 +116,10 @@
     <section>
         <div class="column left">Lobby: </div>
         <div class=column id=indicator>Offline</div>
+    </section>
+
+    <section>
+        <button class="column left" id="disconnect" type="button" onclick="disconnect()">Disconnect</button>
     </section>
 
 </body>

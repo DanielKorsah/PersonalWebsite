@@ -33,9 +33,16 @@ function join() {
         RoomID = str;
         var ref = database.ref(RoomID);
         ref.once("value", gotData, errData);
+        document.getElementById("lobbyID").innerText = "###";
         alert("Joined Room: " + RoomID);
     }
 
     document.getElementById("indicator").innerText = RoomID;
     console.log(GameState);
+}
+
+function disconnect() {
+    RoomID = "";
+    document.getElementById("lobbyID").innerText = "###";
+    document.getElementById("indicator").innerText = "Offline";
 }
