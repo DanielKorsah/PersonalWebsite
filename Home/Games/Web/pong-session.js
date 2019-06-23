@@ -15,23 +15,24 @@ function setID() {
 
 //Validate Room ID to join
 function join() {
-    const re = new RegExp("[0-9a-zA-Z]");
-    const str = document.getElementById("joinID").value;
+    const re = /^[0-9a-zA-Z]*$/;
+    const str = document.getElementById("joinID").value.replace(/\s/g, '');
+    console.log("\"" + str + "\"");
+    if (str == "") {
+        alert("Enter a lobby code to join.")
+        return;
+    }
 
-
-
+    console.log(re.test(str));
     if (!re.test(str)) {
         alert("Nice Try");
         return;
     }
     else {
-        if (str.includes(" ")) {
-            alert("Spaces not allowed");
-            return;
-        }
-        RoomID = document.getElementById("joinID").value;
+        RoomID = str;
         var ref = database.ref(RoomID);
         ref.once("value", gotData, errData);
+        alert("Joined Room: " + RoomID);
     }
 
     console.log(GameState);
