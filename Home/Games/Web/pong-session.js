@@ -10,6 +10,7 @@ function setID() {
     var e = new entry();
     console.log(e);
     ref.push(e);
+    document.getElementById("indicator").innerText = RoomID;
 }
 
 
@@ -35,5 +36,6 @@ function join() {
         alert("Joined Room: " + RoomID);
     }
 
+    document.getElementById("indicator").innerText = RoomID;
     console.log(GameState);
 }

@@ -74,16 +74,15 @@
 
     <style>
         .column {
-            margin: 50px 10px 30px 10px;
             display: inline;
         }
 
-        #host {
+        .topLeft {
             margin: 50px 10px 10px 5%;
             width: 50px
         }
 
-        #join {
+        .left {
             margin: 10px 10px 10px 5%;
             width: 50px
         }
@@ -98,20 +97,20 @@
     </style>
 
     <section>
-        <button class=column type="button" id="host" onclick="setID()">Host</button>
+        <button class="column topLeft" type="button" onclick="setID()">Host</button>
         <div class=column>Lobby ID:</div>
         <div class=column id="lobbyID">###</div>
     </section>
 
     <section>
-        <button class=column type="button" id="join" onclick="join()">Join</button>
+        <button class="column left" type="button" onclick="join()">Join</button>
         <div class=column>Lobby ID:</div>
         <input type="text" id="joinID"><br>
     </section>
 
     <section>
-        <div class=column id=indicator>Lobby: </div>
-        <div class=column>Offline</div>
+        <div class="column left">Lobby: </div>
+        <div class=column id=indicator>Offline</div>
     </section>
 
 </body>
