@@ -12,12 +12,23 @@ function setID() {
     ref.push(e);
 }
 
-function join() {
 
-    if (document.getElementById("joinID").value.includes("<")) {
+//Validate Room ID to join
+function join() {
+    const re = new RegExp("[0-9a-zA-Z]");
+    const str = document.getElementById("joinID").value;
+
+
+
+    if (!re.test(str)) {
         alert("Nice Try");
+        return;
     }
     else {
+        if (str.includes(" ")) {
+            alert("Spaces not allowed");
+            return;
+        }
         RoomID = document.getElementById("joinID").value;
         var ref = database.ref(RoomID);
         ref.once("value", gotData, errData);
