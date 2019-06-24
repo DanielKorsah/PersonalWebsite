@@ -117,7 +117,7 @@ function draw() {
         if (isPlayer1)
             database.ref(RoomID).child("blueY").set(p1.y);
         else
-            database.ref(RoomID).child("redY").set(p2.y);
+            firebase.database().ref(RoomID).child("redY").set(p2.y);
 
         if (isPlayer1)
             database.ref(RoomID).on("value", p1Get, errData);
