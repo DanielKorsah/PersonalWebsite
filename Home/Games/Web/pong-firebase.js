@@ -49,15 +49,15 @@ function gotData(data) {
 function p1Get(snapshot) {
     var lobby = snapshot.val();
     GameState.playerJoined = lobby.playerJoined;
+    console.log(lobby.redY);
     GameState.redY = lobby.redY;
     //console.log(f.playerJoined);
     //console.log(GameState);
 }
 
 function p2Get(snapshot) {
-    console.log(snapshot);
-    console.log(snapshot.ballX);
     var lobby = snapshot.val();
+    console.log(lobby.blueY);
     GameState.blueY = lobby.blueY;
     GameState.ballX = lobby.ballX;
     GameState.ballY = lobby.ballY;

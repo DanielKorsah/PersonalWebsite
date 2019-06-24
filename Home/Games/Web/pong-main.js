@@ -86,13 +86,6 @@ document.addEventListener('keydown', function (event) {
         else if (event.keyCode == 83) {// S pressed
             // move down
             p1Offset = p1.speed;
-
-            var ref = database.ref(RoomID);
-            var e = new entry();
-            e.redY = -20;
-            e.playerJoined = true;
-            //console.log(e);
-
         }
 
     }
@@ -101,21 +94,11 @@ document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {// left arrow pressed
             // move left
             p2Offset = -p2.speed;
-
         }
 
         else if (event.keyCode == 83) {// S pressed
             // move down
             p2Offset = p2.speed;
-
-            var ref = database.ref(RoomID);
-            var e = new entry();
-            e.redY = -20;
-            e.playerJoined = true;
-            //console.log(e);
-            //ref.update(e);
-
-            console.log(snapshot);
         }
     }
 });
