@@ -118,6 +118,7 @@ function draw() {
             database.ref(RoomID).child("blueY").set(p1.y);
         }
         else {
+            console.log(p2);
             console.log("p2.y = " + p2.y);
             firebase.database().ref(RoomID).child("redY").set(p2.y);
         }
