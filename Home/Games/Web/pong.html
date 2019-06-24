@@ -45,6 +45,9 @@
     <!-- the game script -->
     <script src="pong-main.js" defer></script>
 
+    <!--css for the session join elements-->
+    <link href="session-manager.css" rel="stylesheet" type="text/css" media="all">
+
 
 </head>
 
@@ -73,54 +76,31 @@
 
     <br>
 
-    <style>
-        .column {
-            display: inline;
-        }
 
-        .topLeft {
-            margin: 50px 10px 5px 5%;
-            width: 50px
-        }
 
-        .left {
-            margin: 10px 10px 5px 5%;
-            width: 50px
-        }
+    <section class="sessionBox">
 
-        #joinID {
-            width: 120px
-        }
+        <section>
+            <button class="column left" type="button" onclick="setID()">Host</button>
+            <div class=column>Lobby ID:</div>
+            <div class=column id="lobbyID">###</div>
+        </section>
 
-        #indicator {
-            margin: 30px 10px 10px 5%;
-        }
+        <section>
+            <button class="column left" type="button" onclick="join()">Join</button>
+            <div class=column>Lobby ID:</div>
+            <input type="text" id="joinID"><br>
+        </section>
 
-        #disconnect {
-            width: 100px;
-            background-color: rgb(241, 106, 106)
-        }
-    </style>
+        <section>
+            <div class="column left">Lobby: </div>
+            <div class=column id=indicator>Offline</div>
+        </section>
 
-    <section>
-        <button class="column left" type="button" onclick="setID()">Host</button>
-        <div class=column>Lobby ID:</div>
-        <div class=column id="lobbyID">###</div>
-    </section>
+        <section>
+            <button class="column left" id="disconnect" type="button" onclick="disconnect()">Disconnect</button>
+        </section>
 
-    <section>
-        <button class="column left" type="button" onclick="join()">Join</button>
-        <div class=column>Lobby ID:</div>
-        <input type="text" id="joinID"><br>
-    </section>
-
-    <section>
-        <div class="column left">Lobby: </div>
-        <div class=column id=indicator>Offline</div>
-    </section>
-
-    <section>
-        <button class="column left" id="disconnect" type="button" onclick="disconnect()">Disconnect</button>
     </section>
 
 </body>
