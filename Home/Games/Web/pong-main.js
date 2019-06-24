@@ -167,9 +167,9 @@ function draw() {
             database.ref(RoomID).child("redY").set(p2.y);
 
         if (isPlayer1)
-            database.ref(RoomID).once("value", p1Get, errData);
+            database.ref(RoomID).on("value", p1Get, errData);
         else
-            databases.ref(RoomID).on("value", p2Get, errData);
+            database.ref(RoomID).on("value", p2Get, errData);
 
         //update each player
         if (isPlayer1) {
