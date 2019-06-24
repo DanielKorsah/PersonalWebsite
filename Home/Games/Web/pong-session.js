@@ -31,15 +31,31 @@ function join() {
         return;
     }
     else {
+
         RoomID = str;
         var ref = database.ref(RoomID);
-        ref.once("value", gotData, errData);
-        document.getElementById("lobbyID").innerText = "###";
-        isPlayer1 = false;
-        alert("Joined Room: " + RoomID);
+
+        firebase.database().ref(RoomID).limitToFirst(1).once("value", snapshot => {
+            if (snapshot.exists()) {
+                console.log("exists!");
+                //Handle that IDs that do exist
+                ref.once("value", gotData, errData);
+                document.getElementById("lobbyID").innerText = "###";
+                isPlayer1 = false;
+                document.getElementById("indicator").innerText = RoomID;
+                return true;
+            }
+            else {
+                //Handle ID''s that don't exist.
+                alert("Invalid ID: Lobby not found.")
+                RoomID = "";
+                document.getElementById("indicator").innerText = "Offline";
+            }
+        });
+
     }
 
-    document.getElementById("indicator").innerText = RoomID;
+
     console.log(GameState);
 }
 
