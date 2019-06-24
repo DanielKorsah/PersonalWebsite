@@ -80,7 +80,6 @@ document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {// left arrow pressed
             // move left
             p1Offset = -p1.speed;
-            database.ref(RoomID).child("blueY").set(p1.y);
 
         }
 
@@ -93,7 +92,6 @@ document.addEventListener('keydown', function (event) {
             e.redY = -20;
             e.playerJoined = true;
             //console.log(e);
-            database.ref(RoomID).child("blueY").set(p1.y);
 
         }
 
@@ -103,7 +101,6 @@ document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {// left arrow pressed
             // move left
             p2Offset = -p2.speed;
-            database.ref(RoomID).child("redY").set(p2.y);
 
         }
 
@@ -117,7 +114,7 @@ document.addEventListener('keydown', function (event) {
             e.playerJoined = true;
             //console.log(e);
             //ref.update(e);
-            database.ref(RoomID).child("redY").set(p2.y);
+
             console.log(snapshot);
         }
     }
@@ -157,9 +154,21 @@ setInterval(draw, 1);
 
 // main function
 function draw() {
-    //console.log(GameState);
+    //update database state
+    if (RoomID != "") {
 
 
+        if (isPlayer1)
+            database.ref(RoomID).child("blueY").set(p1.y);
+        else
+            database.ref(RoomID).child("redY").set(p2.y);
+
+        if (isPlayer1)
+            database.ref(RoomID).once("value", p1Get, errData);
+        else
+            databases.ref(RoomID).on("value", p2Get, errData);
+
+    }
     // clear screen
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, sizex, sizey);

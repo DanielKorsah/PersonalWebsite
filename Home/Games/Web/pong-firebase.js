@@ -46,6 +46,24 @@ function gotData(data) {
 
 }
 
+function p1Get(snapshot) {
+    var lobby = snapshot.val();
+    GameState.playerJoined = lobby.playerJoined;
+    GameState.redY = lobby.redY;
+    //console.log(f.playerJoined);
+    //console.log(GameState);
+}
+
+function p2Get(snapshot) {
+    console.log(snapshot);
+    console.log(snapshot.ballX);
+    var lobby = snapshot.val();
+    GameState.blueY = lobby.blueY;
+    GameState.ballX = lobby.ballX;
+    GameState.ballY = lobby.ballY;
+    //console.log(GameState);
+}
+
 function errData(err) {
     console.error("Data Error! : " + err);
 }
