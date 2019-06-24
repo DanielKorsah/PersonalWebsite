@@ -12,7 +12,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-console.log(firebase)
+//console.log(firebase)
 
 //firestore database
 var database = firebase.database();
@@ -25,7 +25,6 @@ class entry {
         this.ballX = sizex / 2;
         this.ballY = sizey / 2;
         this.playerJoined = false;
-
     }
 }
 
@@ -35,14 +34,15 @@ function gotData(data) {
     for (let i = 0; i < keys.length; i++) {
         var k = keys[i];
         var bx = lobby[k].ballX;
-        console.log(keys[0]);
-        //console.log(lobby[k]);
-        //console.log(bx);
+        console.log(lobby);
+        console.log(keys[i]);
+        console.log(lobby[k]);
+        console.log(bx);
     }
     var f = lobby[Object.keys(lobby)[0]];
     //console.log(f.playerJoined);
-    GameState = lobby[keys[0]];
-    console.log(GameState);
+    GameState = lobby;
+    //console.log(GameState);
 
 }
 

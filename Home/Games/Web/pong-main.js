@@ -80,19 +80,21 @@ document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {// left arrow pressed
             // move left
             p1Offset = -p1.speed;
+            database.ref(RoomID).child("blueY").set(p1.y);
 
         }
 
-        else if (event.keyCode == 83) {// right arrow pressed
-            // move right
+        else if (event.keyCode == 83) {// S pressed
+            // move down
             p1Offset = p1.speed;
 
             var ref = database.ref(RoomID);
             var e = new entry();
             e.redY = -20;
             e.playerJoined = true;
-            console.log(e);
-            ref.update(e);
+            //console.log(e);
+            database.ref(RoomID).child("blueY").set(p1.y);
+
         }
 
     }
@@ -101,19 +103,22 @@ document.addEventListener('keydown', function (event) {
         if (event.keyCode == 87) {// left arrow pressed
             // move left
             p2Offset = -p2.speed;
+            database.ref(RoomID).child("redY").set(p2.y);
 
         }
 
-        else if (event.keyCode == 83) {// right arrow pressed
-            // move right
+        else if (event.keyCode == 83) {// S pressed
+            // move down
             p2Offset = p2.speed;
 
             var ref = database.ref(RoomID);
             var e = new entry();
             e.redY = -20;
             e.playerJoined = true;
-            console.log(e);
-            ref.update(e);
+            //console.log(e);
+            //ref.update(e);
+            database.ref(RoomID).child("redY").set(p2.y);
+            console.log(snapshot);
         }
     }
 });

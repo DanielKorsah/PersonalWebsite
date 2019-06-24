@@ -9,7 +9,7 @@ function setID() {
     var ref = database.ref(RoomID);
     var e = new entry();
     console.log(e);
-    ref.push(e);
+    ref.update(e);
     document.getElementById("indicator").innerText = RoomID;
     isPlayer1 = true;
 }
