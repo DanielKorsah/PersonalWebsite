@@ -145,9 +145,9 @@ function draw() {
     //update database state
     if (RoomID != "") {
         if (isPlayer1)
-            database.ref(RoomID).child("blueY").set(p1.y);
+            database.ref(RoomID).child("blueY").set(p1.y.toString());
         else
-            database.ref(RoomID).child("redY").set(p2.y);
+            database.ref(RoomID).child("redY").set(p2.y.toString());
 
         if (isPlayer1)
             database.ref(RoomID).on("value", p1Get, errData);
