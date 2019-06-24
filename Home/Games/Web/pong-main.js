@@ -154,10 +154,13 @@ setInterval(draw, 1);
 
 // main function
 function draw() {
+
+    // clear screen
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, sizex, sizey);
+
     //update database state
     if (RoomID != "") {
-
-
         if (isPlayer1)
             database.ref(RoomID).child("blueY").set(p1.y);
         else
@@ -168,19 +171,16 @@ function draw() {
         else
             databases.ref(RoomID).on("value", p2Get, errData);
 
+        //update each player
+        if (isPlayer1) {
+            p1.y = p1.y + p1Offset;
+            p2.y = GameState.redY;
+        }
+        else {
+            p1.y = GameState.blueY;
+            p2.y = p2.y + p2Offset;
+        }
     }
-    // clear screen
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, sizex, sizey);
-
-    // udpate player
-    p1.y = p1.y + p1Offset;
-    p2.y = p2.y + p2Offset;
-
-    //update other player
-
-
-
 
 
     // draw player
