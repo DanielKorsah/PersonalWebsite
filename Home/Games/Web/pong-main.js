@@ -41,37 +41,7 @@ class player {
 let p1 = new player(50, 400, "blue");
 let p2 = new player(950, 400, "red");
 
-// create a bullet
-function Bullet(I) {
-    I.active = true;
-    I.xVelocity = 0;
-    I.yVelocity = -I.speed;
-    I.width = 3;
-    I.height = 3;
-    I.color = "#000";
 
-    // check whether bullet is within canvas
-    I.inBounds = function () {
-        return I.x >= 0 && I.x <= sizex &&
-            I.y >= 0 && I.y <= sizey;
-    };
-
-    // draw bullet
-    I.draw = function () {
-        ctx.fillStyle = "yellow";
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-    };
-
-    // udpate bullet
-    I.update = function () {
-        I.x += I.xVelocity;
-        I.y += I.yVelocity;
-
-        I.active = I.active && I.inBounds();
-    };
-
-    return I;
-}
 
 // manage key strokes (key down)
 document.addEventListener('keydown', function (event) {
