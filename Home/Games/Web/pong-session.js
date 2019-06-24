@@ -11,6 +11,7 @@ function setID() {
     console.log(e);
     ref.push(e);
     document.getElementById("indicator").innerText = RoomID;
+    isPlayer1 = true;
 }
 
 
@@ -34,6 +35,7 @@ function join() {
         var ref = database.ref(RoomID);
         ref.once("value", gotData, errData);
         document.getElementById("lobbyID").innerText = "###";
+        isPlayer1 = false;
         alert("Joined Room: " + RoomID);
     }
 
@@ -43,6 +45,7 @@ function join() {
 
 function disconnect() {
     RoomID = "";
+    isPlayer1 = true;
     document.getElementById("lobbyID").innerText = "###";
     document.getElementById("indicator").innerText = "Offline";
 }

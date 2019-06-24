@@ -4,8 +4,9 @@
 var sizex = 1000;
 var sizey = 500;
 
-var xOffset = 0;
-var yOffset = 0;
+
+var p1Offset = 0;
+var p2Offset = 0;
 
 
 
@@ -74,42 +75,76 @@ function Bullet(I) {
 
 // manage key strokes (key down)
 document.addEventListener('keydown', function (event) {
-    if (event.keyCode == 87) {// left arrow pressed
-        // move left
-        xOffset = 0;
-        yOffset = -p1.speed;
+    if (isPlayer1) {
+
+        if (event.keyCode == 87) {// left arrow pressed
+            // move left
+            p1Offset = -p1.speed;
+
+        }
+
+        else if (event.keyCode == 83) {// right arrow pressed
+            // move right
+            p1Offset = p1.speed;
+
+            var ref = database.ref(RoomID);
+            var e = new entry();
+            e.redY = -20;
+            e.playerJoined = true;
+            console.log(e);
+            ref.update(e);
+        }
 
     }
+    else {
 
-    else if (event.keyCode == 83) {// right arrow pressed
-        // move right
-        xOffset = 0;
-        yOffset = p1.speed;
+        if (event.keyCode == 87) {// left arrow pressed
+            // move left
+            p2Offset = -p2.speed;
 
-        var ref = database.ref(RoomID);
-        var e = new entry();
-        e.redY = -20;
-        e.playerJoined = true;
-        console.log(e);
-        ref.update(e);
+        }
+
+        else if (event.keyCode == 83) {// right arrow pressed
+            // move right
+            p2Offset = p2.speed;
+
+            var ref = database.ref(RoomID);
+            var e = new entry();
+            e.redY = -20;
+            e.playerJoined = true;
+            console.log(e);
+            ref.update(e);
+        }
     }
-
-
 });
 
 // manage key strokes (key up)
 document.addEventListener('keyup', function (event) {
-    if (event.keyCode == 87) {// left arrow pressed
-        // move left
-        xOffset = 0;
-        yOffset = 0;
+    if (isPlayer1) {
+
+        if (event.keyCode == 87) {// left arrow pressed
+            // move left
+            p1Offset = 0;
+        }
+
+        else if (event.keyCode == 83) {// right arrow pressed
+            // move right
+            p1Offset = 0;
+        }
+    }
+    else {
+
+        if (event.keyCode == 87) {// left arrow pressed
+            // move left
+            p2Offset = 0;
+        }
+
+        else if (event.keyCode == 83) {// right arrow pressed
+            // move right
+            p2Offset = 0;
+        }
     }
 
-    else if (event.keyCode == 83) {// right arrow pressed
-        // move right
-        xOffset = 0;
-        yOffset = 0;
-    }
 });
 
 // call draw0 function every 1ms
@@ -125,8 +160,8 @@ function draw() {
     ctx.fillRect(0, 0, sizex, sizey);
 
     // udpate player
-    p1.x = p1.x + xOffset;
-    p1.y = p1.y + yOffset;
+    p1.y = p1.y + p1Offset;
+    p2.y = p2.y + p2Offset;
 
     //update other player
 
