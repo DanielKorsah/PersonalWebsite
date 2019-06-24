@@ -133,7 +133,7 @@ document.addEventListener('keyup', function (event) {
 });
 
 // call draw0 function every 1ms
-setInterval(draw, 1);
+setInterval(draw, 16);
 
 // main function
 function draw() {
