@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        Games Library
+        Dan's Home Page
     </title>
     <!--bootstrap CCS, JS, PopperJS and jQuery-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -28,56 +28,48 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!--css for the controls and description-->
+    <link href="bitshift.css" rel="stylesheet" type="text/css" media="all">
+
 </head>
 
 <body>
 
-    <ol class="breadcrumb" style=font-size:30px>
-        <li><a href="../index.html">Home</a></li>/
-        <li class="active">Games</li>
-    </ol>
+    <div class="container">
+        <div class="d-flex row justify-content-center">
+            <h1 style=font-size:50px>Bitshift Colour Palette Prototype</h1>
+        </div>
+    </div>
 
     <div class="container">
         <div class="d-flex row justify-content-center">
-            <h1 style=font-size:50px>Games</h1>
+            <iframe src="https://i.simmer.io/@RocketmanDan/bitshift-colour-pallet-prototype"
+                style="width:1280px;height:720px;border:0"></iframe>
         </div>
     </div>
-    <br><br>
 
     <div class="container">
-        <div class="row">
-
-            <div class="col-md-4">
-                <h3>HTML/JS Games:</h3>
-                <ul>
-                    <li><a href="Web/pong.html">Pong [WIP]</a></li>
-                    <li>Placceholder1-2</li>
-                    <li>Placceholder1-3</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <h3>Web GL Unity Builds:</h3>
-                <ul>
-                    <li><a href="Web/bitshift.html">Bitshift [Prototype]</a></li>
-                    <li>Placceholder2-2</li>
-                    <li>Placceholder2-3</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <h3>Downloadable Apps:</h3>
-                <ul>
-                    <li>Placceholder3-1</li>
-                    <li>Placceholder3-2</li>
-                    <li>Placceholder3-3</li>
-                </ul>
-            </div>
+        <div class="d-flex row justify-content-center">
+            <h5>This is a Prototype for the purposes of getting feedback for further development of this small toy
+                project.</h5>
         </div>
-
-        <hr>
-
     </div>
+
+    <br>
+    <section class="leftMargin">
+        <h3>Controls:</h3>
+        <ul>
+            <li>Change background colour - Hold 1 and cycle with up and down arrow keys.</li>
+            <li>Change live wire colour - Hold 2 and cycle with up and down arrow keys.</li>
+            <li>Change non-live wire colour - Hold 3 and cycle with up and down arrow keys.</li>
+            <li>Flip input bit between 1 and 0 - Click on the bit you want to change.</li>
+        </ul>
+    </section>
+
+    <section class="leftMargin">
+        WebGL embed hosted on Simmer.io service.
+    </section>
+
 </body>
 
 </html>
