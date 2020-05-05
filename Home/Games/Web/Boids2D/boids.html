@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Games Library
-        </title>
+        <title>Boids 2D</title>
+
         <!--bootstrap CCS, JS, PopperJS and jQuery-->
         <link
             rel="stylesheet"
@@ -53,59 +52,31 @@
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+        <!-- P5 Libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.js"></script>
+
+        <!-- Boids code -->
+        <script src="boid.js"></script>
+        <script src="sketch.js"></script>
+
+        <header>
+            <ol class="breadcrumb" style="font-size: 30px;">
+                <li><a href="../../index.html">Home</a></li>
+                /
+                <li><a href="../hub.html">Games</a></li>
+                /
+                <li class="active">Boids2D</li>
+            </ol>
+        </header>
     </head>
 
     <body>
-        <ol class="breadcrumb" style="font-size: 30px;">
-            <li><a href="../index.html">Home</a></li>
-            /
-            <li class="active">Games</li>
-        </ol>
-
         <div class="container">
-            <div class="d-flex row justify-content-center">
-                <h1 style="font-size: 50px;">Games</h1>
+            <div id="sketchContainer" class="d-flex row justify-content-center">
+                <!-- The p5 canvas will spawn here. -->
             </div>
-        </div>
-        <br /><br />
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>HTML/JS Games:</h3>
-                    <ul>
-                        <li>
-                            <a href="Web/Boids2D/boids.html">Boids2D [WIP]</a>
-                        </li>
-                        <li>
-                            <a href="Web/pong.html">Multiplayer Pong [WIP]</a>
-                        </li>
-                        <li>Placceholder1-3</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h3>Web GL Unity Builds:</h3>
-                    <ul>
-                        <li>
-                            <a href="Web/bitshift.html">Bitshift [Prototype]</a>
-                        </li>
-                        <li>Placceholder2-2</li>
-                        <li>Placceholder2-3</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h3>Downloadable Apps:</h3>
-                    <ul>
-                        <li>Placceholder3-1</li>
-                        <li>Placceholder3-2</li>
-                        <li>Placceholder3-3</li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr />
         </div>
     </body>
 </html>
