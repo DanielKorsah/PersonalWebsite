@@ -39,33 +39,32 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/84b5f9ae9d.js" crossorigin="anonymous"></script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="danstyle.css">
+
 </head>
 
 <body>
-    <ol class="breadcrumb" style=font-size:30px>
-        <li class="active">Home</li>
+    <ol class="breadcrumb background" style=font-size:30px>
+        <li class="active bannerText">Home</li>
     </ol>
 
     <div class="container">
         <div class="d-flex row justify-content-center">
-            <h1 style=font-size:100px>Welcome</h1>
-        </div>
-    </div>
-    <br><br>
-    <div class="container">
-        <div class="d-flex row justify-content-center">
-            <h4></h4>
+            <h1 style=font-size:60px>Daniel Korsah: Game Dev Extraordinaire</h1>
         </div>
     </div>
 
     <div class="container">
-        <div class="col-md-auto">
-            <p style=font-size:20px>
-                Hello. My name is Daniel. I'm a software engineer and game devloper. This website is hand made as an excuse to learn
-                a little about web development and to give me a place to showcase my other work. It's a little rough around the edges, but
-                I'm not trying to win any prizes or work in front end web dev. It will come along nicely in due course and serve its purpose well enough.
-                In the meantime maybe check out my <a href="http://www.Github.com/DanielKorsah">Github</a> to see some projects
-                I've worked on or played with. Some of my some of my projects can be run or downloaded <a href="Games/hub.html">here</a>.
+        <div class="col-md-auto d-flex">
+            <p style={font-size:20px;text-justify:newspaper;}>
+                Hello. My name is Daniel. I'm a software engineer and game developer. This website is hand made as an excuse to learn
+                a little about web development and to give me a place to showcase my other work. Check out my <a class="link" href="http://www.Github.com/DanielKorsah">Github</a> to see some projects
+                I've worked. Some of my some of my projects can be run in browser or downloaded <a class="link" href="Games/hub.html">here</a>. Typically
+                published under the Rocketman Dan pseudonym.
             </p>
         </div>
     </div>
@@ -74,34 +73,32 @@
         <div class="row">
 
             <div class="col-md-4">
-                <div class="jumbotron">
-                    <h1 class="display-4">CV</h1>
+                <div>
+                    <h1 class="display-4">CV </h1><i class="fa-solid fa-file-user"></i>
                     <p class="lead">Employers can find my credentials and experience here as pdf.</p>
-                    <hr class="my-4">
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="CV.pdf" role="button">Find out more</a>
+                        <a class="effect effect-1 link" href="CV.html" role="button">Find out more</a>
                     </p>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="jumbotron">
+                <div>
                     <h1 class="display-4">Game Library</h1>
                     <p class="lead">Browse the games I've made. They range from specifically built for web, to cross
                         compiled Web GL Unity builds, to desktop executables. </p>
-                    <hr class="my-4">
-                    <a class="btn btn-primary btn-lg" href="Games/hub.html" role="button">Browse</a>
+                    <a class="effect effect-1 link" href="Games/hub.html">Browse</a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="jumbotron">
-                    <h1 class="display-4">Github</h1>
+                <div>
+                    <h1 class="display-4">Github <i class="fa-brands fa-github"></i></h1>
+
                     <p class="lead">Public repositories of most of my projects. See what I've tried my hand at and feel
                         free to mock it a bit. I'm open to change requests and PRs.</p>
-                    <hr class="my-4">
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="https://github.com/DanielKorsah" role="button">To
+                        <a class="effect effect-1 link" href="https://github.com/DanielKorsah" role="button">To
                             Github</a>
                     </p>
                 </div>

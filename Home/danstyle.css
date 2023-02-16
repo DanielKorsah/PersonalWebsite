@@ -1,0 +1,130 @@
+body {
+  background-color: #1B1B1B;
+  color: #ffffff;
+  font-family: "Segoe UI";
+}
+.breadcrumb{
+  color: #000000;
+  background-color: #E2A446;
+  border-radius: 0;
+}
+
+a{
+  color: black;
+}
+a:hover{
+  color: #000000;
+}
+
+
+
+.jumbotron {
+  background-color: red;
+}
+
+p{
+  text-justify:newspaper;
+}
+
+.link:link {
+  color: #E2A446;
+}
+
+.link:visited {
+  color: #8d6cff;
+}
+.link:hover {
+  color: orangered;
+}
+
+.centre{
+  margin: auto;
+  width: 50%;
+  /*border: 3px solid green;*/
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.row-element{
+  margin-left: 40;
+  margin-right: auto;
+
+}
+
+.textCentre{
+  text-align: center;
+}
+
+
+/* common styles !!!YOU DON'T NEED THEM */
+body {
+  background-color: #1B1B1B;
+}
+body .container {
+  width: 850px;
+  margin: 70px auto 0px auto;
+  text-align: center;
+}
+body .container .button-effect {
+  padding: 30px 0px;
+}
+body .container .button-effect h2 {
+  margin-bottom: 40px;
+}
+body .container .button-effect a {
+  margin-right: 17px;
+}
+body .container .button-effect a:nth-child(1) {
+  background-color: #1b1b1b;
+}
+
+/* button styles !!!YOU NEED THEM
+!!!ALSO YOU NEED TO ADD FONTWESOME */
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  /* background-color: - add your own background-color */
+  font-family: "Roboto", sans-serif;
+  /* put your font-family */
+  font-size: 18px;
+  padding: 20px 0px;
+  width: 150px;
+  border-radius: 5;
+  overflow: hidden;
+}
+
+/* effect-1 styles */
+.effect.effect-1 {
+  transition: all 0.2s linear 0s;
+  background-color: #2B3937;
+}
+.effect.effect-1:before {
+  content: "\f178";
+  font-family: FontAwesome;
+  font-size: 15px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-1:hover {
+  text-indent: -20px;
+}
+.effect.effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px;
+}
+
+/*# sourceMappingURL=danstyle.css.map */
