@@ -3,33 +3,51 @@ body {
   color: #ffffff;
   font-family: "Segoe UI";
 }
-.breadcrumb{
+
+.breadcrumb {
   color: #000000;
   background-color: #E2A446;
   border-radius: 0;
 }
 
-a{
+a {
   color: black;
 }
-a:hover{
+a:hover {
   color: #000000;
 }
 
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+  text-indent: -23px; /* key property */
+  margin-left: 20px; /* key property */
+}
 
+li {
+  text-align: left;
+}
+
+hr {
+  background-color: #e2a446;
+}
+
+strong {
+  color: #e2a446;
+}
 
 .jumbotron {
   background-color: red;
 }
 
-p{
-  text-justify:newspaper;
+p {
+  text-align: left;
+  text-justify: newspaper;
 }
 
 .link:link {
   color: #E2A446;
 }
-
 .link:visited {
   color: #8d6cff;
 }
@@ -37,53 +55,58 @@ p{
   color: orangered;
 }
 
-.centre{
+.centre {
   margin: auto;
-  width: 50%;
+  width: 70%;
   /*border: 3px solid green;*/
 }
 
-.row-container{
+.row-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
-.row-element{
-  margin-left: 40;
+.row-element {
+  margin-left: 10px;
   margin-right: auto;
-
 }
 
-.textCentre{
+.textCentre {
   text-align: center;
 }
 
+.experience-bubble {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #2b3938;
+  border-width: 2px;
+  padding: 10px;
+}
 
 /* common styles !!!YOU DON'T NEED THEM */
-body {
-  background-color: #1B1B1B;
-}
-body .container {
+.container {
   width: 850px;
   margin: 70px auto 0px auto;
   text-align: center;
 }
-body .container .button-effect {
+.container .button-effect {
   padding: 30px 0px;
 }
-body .container .button-effect h2 {
+.container .button-effect h2 {
   margin-bottom: 40px;
 }
-body .container .button-effect a {
+.container .button-effect a {
   margin-right: 17px;
 }
-body .container .button-effect a:nth-child(1) {
-  background-color: #1b1b1b;
+.container .button-effect a:nth-child(1) {
+  background-color: #2b3938;
 }
 
 /* button styles !!!YOU NEED THEM
 !!!ALSO YOU NEED TO ADD FONTWESOME */
-.effect {
+.button {
+  border-radius: 5px;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -100,11 +123,11 @@ body .container .button-effect a:nth-child(1) {
 }
 
 /* effect-1 styles */
-.effect.effect-1 {
+.button.arrow-effect {
   transition: all 0.2s linear 0s;
-  background-color: #2B3937;
+  background-color: #2b3938;
 }
-.effect.effect-1:before {
+.button.arrow-effect:before {
   content: "\f178";
   font-family: FontAwesome;
   font-size: 15px;
@@ -119,12 +142,53 @@ body .container .button-effect a:nth-child(1) {
   width: 40px;
   transition: all 0.2s linear 0s;
 }
-.effect.effect-1:hover {
+.button.arrow-effect:hover {
   text-indent: -20px;
 }
-.effect.effect-1:hover:before {
+.button.arrow-effect:hover:before {
   opacity: 1;
   text-indent: 0px;
+}
+
+/* vertical arrows */
+.line-vertical {
+  width: 2px; /* line-width */
+  height: 75px; /* line length */
+  margin: auto;
+}
+
+/* common arrow styles */
+.line-vertical, .line-horizontal {
+  position: relative;
+  background: #2b3938;
+}
+
+/* common arrow styles */
+.line-vertical, .line-horizontal {
+  position: relative;
+  background: #2b3938;
+}
+
+.arrow-up:after,
+.arrow-down:before,
+.arrow-left:after,
+.arrow-right:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 5px solid transparent;
+}
+
+/* vertical arrows */
+.arrow-up:after,
+.arrow-down:before {
+  left: -4px;
+}
+
+.arrow-up:after {
+  top: -15px;
+  border-bottom: 15px solid #2b3938;
 }
 
 /*# sourceMappingURL=danstyle.css.map */
