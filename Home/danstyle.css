@@ -70,6 +70,7 @@ p {
 .row-element {
   margin-left: 10px;
   margin-right: auto;
+  flex-basis: 33%;
 }
 
 .textCentre {
