@@ -1,197 +1,265 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Games Library
-        </title>
+<head>
+    <title>
+        Games Library
+    </title>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-167550066-1"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            gtag("config", "UA-167550066-1");
-        </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-        <!--bootstrap CCS, JS, PopperJS and jQuery-->
-        <link
+        gtag("js", new Date());
+
+        gtag("config", "UA-167550066-1");
+    </script>
+
+    <!--bootstrap CCS, JS, PopperJS and jQuery-->
+    <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
-        />
-        <script
+    />
+    <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"
-        ></script>
-        <script
+    ></script>
+    <script
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"
-        ></script>
-        <script
+    ></script>
+    <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
-        ></script>
+    ></script>
 
-        <!--favicons-->
-        <link
+    <!--favicons-->
+    <link
             rel="apple-touch-icon"
             sizes="180x180"
             href="/res/favicons/apple-touch-icon.png"
-        />
-        <link
+    />
+    <link
             rel="icon"
             type="image/png"
             sizes="32x32"
             href="/res/favicons/favicon-32x32.png"
-        />
-        <link
+    />
+    <link
             rel="icon"
             type="image/png"
             sizes="16x16"
             href="/res/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/res/favicons/site.webmanifest" />
-        <link
+    />
+    <link rel="manifest" href="/res/favicons/site.webmanifest"/>
+    <link
             rel="mask-icon"
             href="/res/favicons/safari-pinned-tab.svg"
             color="#5bbad5"
-        />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+    />
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ffffff"/>
 
-        <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/84b5f9ae9d.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/84b5f9ae9d.js" crossorigin="anonymous"></script>
 
-        <!--Custom CSS-->
-        <link rel="stylesheet" href="../danstyle.css">
-    </head>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../danstyle.css">
+</head>
 
-    <body>
-        <ol class="breadcrumb" style="font-size: 30px;">
-            <li><a href="../index.html">Home</a></li>
-            /
-            <li class="active">Games</li>
-        </ol>
+<body>
+<ol class="breadcrumb" style="font-size: 30px;">
+    <li><a href="../index.html">Home</a></li>
+    /
+    <li class="active">Portfolio</li>
+</ol>
 
-        <div class="container">
-            <div class="d-flex row justify-content-center">
-                <h1 style="font-size: 50px;">Games</h1>
+<div>
+    <div class="centre">
+        <h1 style="font-size: 50px; text-align: center">Portfolio</h1>
+    </div>
+</div>
+<br><br>
+
+<div class="centre">
+    <h2 style="text-align: center">Playable Demos</h2>
+    <br>
+    <p class="centre">
+        These projects can be downloaded or played in browser. Click on their card to get access.
+    </p>
+    <br>
+</div>
+
+
+<div class="centre" style="height: 1000px; flex-direction: column">
+    <div>
+        <div class="card_box ">
+
+            <div style="background-image: url('../res/Pictures/vehicle.gif'); height: 100%; border-style: inherit; border-color: #D90368"
+                 class="card-img">
+                <!--            <img src="../res/Pictures/vehicle.gif" class="card-img">-->
             </div>
+
+            <div class="card-text"/>
+            <strong
+                    style="padding: 20px">Vehicle Dynamics Simulator
+            </strong>
+
+            <p style="padding-left: 20px; max-height: 180px">
+                Vehicle physics based on custom force simulation on the rolling,
+                slipping, and suspension axes of each wheel. Supports arbitrary number of wheels.
+                Each wheel is tunable individually or as a set though the vehicle controller. Parameters
+                include torque delivery curve; grip coefficient; steering angle; suspension stiffness/damper.
+            </p>
+            <a style="float: right; margin-top: -15px" class="link"
+               href="https://github.com/DanielKorsah/Vehicle-Model-Development">[source
+                code]
+            </a>
         </div>
-        <br /><br />
+    </div>
+    <br>
 
-        <div class="container">
-            <div class="row-container">
-                <div class="row-element">
-                    <h3>HTML/JS Games:</h3>
-                    <ul>
-                        <li>
-                            <a class="link" href="Web/Boids2D/boids.html">Boids2D [WIP]</a>
-                        </li>
-                        <li>
-                            <a class="link" href="Web/pong.html">Multiplayer Pong [WIP]</a>
-                        </li>
-                        <li>Placceholder1-3</li>
-                    </ul>
-                </div>
+    <div>
+        <div class="card_box ">
 
-                <div class="row-element">
-                    <h3>Web GL Unity Builds:</h3>
-                    <ul>
-                        <li>
-                            <a class="link" href="Web/bitshift.html">Bitshift [Prototype]</a>
-                        </li>
-                        <li>
-                            <a class="link"  href="Web/WarhammerRoller.html"
-                                >Warhammer Calculator [App Demo]</a
-                            >
-                        </li>
-                        <li>Placceholder2-3</li>
-                    </ul>
-                </div>
-
-                <div class="row-element">
-                    <h3>Downloadable Apps:</h3>
-                    <ul>
-                        <li>Placceholder3-1</li>
-                        <li>Placceholder3-2</li>
-                        <li>Placceholder3-3</li>
-                    </ul>
-                </div>
+            <div style="background-image: url('../res/Pictures/vehicle.gif'); height: 100%; border-style: inherit; border-color: #D90368"
+                 class="card-img">
+                <!--            <img src="../res/Pictures/vehicle.gif" class="card-img">-->
             </div>
 
-            <hr />
+            <div class="card-text"/>
+            <strong
+                    style="padding: 20px">Vehicle Dynamics Simulator
+            </strong>
+
+            <p style="padding-left: 20px; max-height: 180px">
+                Vehicle physics based on custom force simulation on the rolling,
+                slipping, and suspension axes of each wheel. Supports arbitrary number of wheels.
+                Each wheel is tunable individually or as a set though the vehicle controller. Parameters
+                include torque delivery curve; grip coefficient; steering angle; suspension stiffness/damper.
+            </p>
+            <a style="float: right; margin-top: -15px" class="link"
+               href="https://github.com/DanielKorsah/Vehicle-Model-Development">[source
+                code]
+            </a>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div>
+    <div class="row-element">
+        <div class="column-element-3rd">
+            <h3>HTML/JS Games:</h3>
+            <ul>
+                <li>
+                    <a class="link" href="Web/Boids2D/boids.html">Boids2D [WIP]</a>
+                </li>
+                <li>
+                    <a class="link" href="Web/pong.html">Multiplayer Pong [WIP]</a>
+                </li>
+                <li>Placeholder1-3</li>
+            </ul>
         </div>
 
-        <div class = "centre">
-            <div>
-                <div>
-                    <h2>Projects I'm Proud Of:</h2>
-                </div>
-            </div>
-
-            <br>
-
-            <div>
-                <div>
-                    <p>
-                        <strong>This Website</strong><br>
-                        This project required me to learn several new skills that I'm not formally trained for nor
-                        particularly comfortable with. I already roguhly knew HTML but I have taken great strides in my
-                        ability to structure things as well as applying CSS.<br>
-                        I learned to configure an Appache server with an SSL certificate and have my domain always
-                        resolve to the correct IP with dynamic DNS. A bash script checks constantly for updates to the
-                        repo and pulls changes to the server whenever necessary. Not the most ellegant form of
-                        Continuous integration but an interesting experiment. <br>
-                        I had to take security measures to prevent inputs from being abused. Javascript was something I
-                        was familiar with in the context of games on HTML5 canvas but it has been a great opportunity to
-                        grow my experience using Javascript in a
-                        more useful context. <br>
-                        I got to use the firebase API for it's realtime database to support my multiplayer browser
-                        games. <br>
-
-
-                    </p>
-
-                    <p>
-                        <strong>Discord Moderation Bot</strong><br>
-                        This is the first software I made on request for a client. It is a moderation tool for tracking
-                        reprimands and punishments to discord users and reminding when they can be appealed or
-                        suggesting when to ban or kick based on accumulated warnings. I had to learn to use two APIs:
-                        the Discord API and the Google Sheets API. The sheets API was needed as the users wanted a human
-                        readable output table and I had no other means to give an easy front end at the time. Today I
-                        might have used SQLite as a database and gived an output on my site.
-
-                    </p>
-
-                    <p>
-                        <strong>Space Battle Royale Game</strong><br>
-                        This is a 3D multiplayer game built in Unity as part of a group for a module in 3rd year. This
-                        taught me a lot about working in a multi-discipline envirnemont and the value of discipline
-                        specialisation and task prioritisation. We delivered a game which beat all other projects in the
-                        year with the exception of one. Mostly thanks to organised management and playing to team
-                        members' strengths.<br>
-                        I was specifically responsible for the camera controls, UI and UX, as well as integrating the
-                        sounds produced by our sound designer so that they were intertwined with the gameplay. <br>
-                        This project was the first time I used a planning board and had regular meetings with a client
-                        and the team. This was a decent first exposure to what I may encounter in a professional
-                        envirnonment
-                        in the future, including requirements and design documentation.
-                    </p>
-
-                </div>
-            </div>
+        <div class="column-element-3rd">
+            <h3>Web GL Unity Builds:</h3>
+            <ul>
+                <li>
+                    <a class="link" href="Web/bitshift.html">Bitshift [Prototype]</a>
+                </li>
+                <li>
+                    <a class="link" href="Web/WarhammerRoller.html"
+                    >Warhammer Calculator [App Demo]</a
+                    >
+                </li>
+                <li>Placceholder2-3</li>
+            </ul>
         </div>
-    </body>
+
+        <div class="column-element-3rd">
+            <h3>Downloadable Apps:</h3>
+            <ul>
+                <li>Placeholder3-1</li>
+                <li>Placeholder3-2</li>
+                <li>Placeholder3-3</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="centre">
+    <div>
+        <div>
+            <h2>Projects I'm Proud Of:</h2>
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <div>
+            <p>
+                <strong>This Website</strong><br>
+                This project required me to learn several new skills that I'm not formally trained for nor
+                particularly comfortable with. I already roguhly knew HTML but I have taken great strides in my
+                ability to structure things as well as applying CSS.<br>
+                I learned to configure an Appache server with an SSL certificate and have my domain always
+                resolve to the correct IP with dynamic DNS. A bash script checks constantly for updates to the
+                repo and pulls changes to the server whenever necessary. Not the most ellegant form of
+                Continuous integration but an interesting experiment. <br>
+                I had to take security measures to prevent inputs from being abused. Javascript was something I
+                was familiar with in the context of games on HTML5 canvas but it has been a great opportunity to
+                grow my experience using Javascript in a
+                more useful context. <br>
+                I got to use the firebase API for it's realtime database to support my multiplayer browser
+                games. <br>
+
+
+            </p>
+
+            <p>
+                <strong>Discord Moderation Bot</strong><br>
+                This is the first software I made on request for a client. It is a moderation tool for tracking
+                reprimands and punishments to discord users and reminding when they can be appealed or
+                suggesting when to ban or kick based on accumulated warnings. I had to learn to use two APIs:
+                the Discord API and the Google Sheets API. The sheets API was needed as the users wanted a human
+                readable output table and I had no other means to give an easy front end at the time. Today I
+                might have used SQLite as a database and gived an output on my site.
+
+            </p>
+
+            <p>
+                <strong>Space Battle Royale Game</strong><br>
+                This is a 3D multiplayer game built in Unity as part of a group for a module in 3rd year. This
+                taught me a lot about working in a multi-discipline envirnemont and the value of discipline
+                specialisation and task prioritisation. We delivered a game which beat all other projects in the
+                year with the exception of one. Mostly thanks to organised management and playing to team
+                members' strengths.<br>
+                I was specifically responsible for the camera controls, UI and UX, as well as integrating the
+                sounds produced by our sound designer so that they were intertwined with the gameplay. <br>
+                This project was the first time I used a planning board and had regular meetings with a client
+                and the team. This was a decent first exposure to what I may encounter in a professional
+                envirnonment
+                in the future, including requirements and design documentation.
+            </p>
+
+        </div>
+    </div>
+</div>
+</body>
 </html>

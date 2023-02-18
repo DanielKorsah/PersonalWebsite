@@ -36,10 +36,13 @@ hr{
     background-color: #e2a446;
 }
 
+img{
+    vertical-align: top;
+}
+
 strong{
     color: #e2a446;
 }
-
 
 
 .jumbotron {
@@ -72,23 +75,63 @@ p{
     /*border: 3px solid green;*/
 }
 
-.row-container{
+.row-element{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    //border-color: white;
+    //border-style: solid;
+    //border-width: 1px;
 }
 
-.row-element{
+.column-element-3rd{
     margin-left: 10px;
     margin-right: auto;
     flex-basis: 33%;
 }
 
+
+.source-code-link{
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+
+.card_box{
+    background-color: #2b3938;
+    //border-color: #2b3938;
+    //border-style: solid;
+    border-radius: 15px;
+    height: 200px;
+}
+
+.card-img{
+    max-height:100%;
+    max-width: 25%;
+    float: left;
+    margin-left: 0;
+    //border-color: blue;
+    //border-style: solid;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.card-text{
+    min-height: 100%;
+    width:65%;
+    float: left;
+    background-color: rgba(244, 234, 230, 0);
+    //border-color: green;
+    //border-style: solid;
+}
+
 .textCentre{
     text-align: center;
 }
-
-
 
 .experience-bubble{
     border-style: solid;
