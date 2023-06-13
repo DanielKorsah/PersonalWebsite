@@ -43,7 +43,7 @@ class Boids {
     }
 
     align(boids) {
-        let perceptionRadius = 50;
+        let perceptionRadius = 30;
         let steering = createVector();
         let total = 0;
         for (let other of boids) {
@@ -63,7 +63,7 @@ class Boids {
     }
 
     separation(boids) {
-        let perceptionRadius = 50;
+        let perceptionRadius = 20;
         let steering = createVector();
         let total = 0;
         for (let other of boids) {
@@ -85,7 +85,7 @@ class Boids {
     }
 
     cohesion(boids) {
-        let perceptionRadius = 100;
+        let perceptionRadius = 80;
         let steering = createVector();
         let total = 0;
         for (let other of boids) {
@@ -107,8 +107,8 @@ class Boids {
 
     flock(boids) {
         this.acceleration.set(0, 0);
-        let alignment = this.align(boids);
-        let cohesion = this.cohesion(boids);
+        let alignment = this.align(boids).mult(1);
+        let cohesion = this.cohesion(boids).mult(1.5);
         let separation = this.separation(boids).mult(2);
         this.acceleration.add(alignment);
         this.acceleration.add(cohesion);
