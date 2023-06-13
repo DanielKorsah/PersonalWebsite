@@ -29,6 +29,13 @@ a{
     }
 }
 
+#canvas-container {
+}
+
+#canvas-container canvas {
+    border: 1px solid #e2a446;
+}
+
 ul{
     list-style-position: inside;
     padding-left: 0;

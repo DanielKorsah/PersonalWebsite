@@ -4,7 +4,7 @@ function setup() {
     canv = createCanvas(800, 800);
     canv.parent("sketchContainer");
     for (let i = 0; i < 100; i++) {
-        boids.push(new Boid());
+        boids.push(new Boids());
     }
 }
 
