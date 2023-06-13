@@ -12,12 +12,20 @@ body {
     color: #000000;
     background-color: #E2A446;
     border-radius: 0;
+    list-style: none;
+    flex-direction: row;
+}
+
+.breadcrumb-element{
+    display: inline;
 }
 
 a{
     color: black;
+    text-decoration-line: none;
     &:hover{
         color: #000000;
+        text-decoration-line: underline;
     }
 }
 

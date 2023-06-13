@@ -6,8 +6,19 @@
     <title>Unity WebGL Player | MathsVis</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../../../danstyle.css">
   </head>
   <body>
+
+    <ol class="breadcrumb" style="font-size: 30px;">
+      <li class="breadcrumb-element"><a href="../../../index.html">Home</a></li>
+      /
+      <li class="breadcrumb-element"><a href="../../all-demos.html">Portfolio</a></li>
+      /
+      <li class="active breadcrumb-element" >Mathvis</li>
+    </ol>
+
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -20,9 +31,7 @@
         WebGL builds are not supported on mobile devices.
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">MathsVis</div>
       </div>
     </div>
     <script>

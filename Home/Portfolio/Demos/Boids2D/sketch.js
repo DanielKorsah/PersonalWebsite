@@ -15,5 +15,6 @@ function draw() {
         boid.flock(boids);
         boid.update();
         boid.graphic();
+        console.log(boid.position);
     }
 }
