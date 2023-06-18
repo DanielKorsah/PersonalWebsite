@@ -3,11 +3,23 @@ $border-radius: 5;
 $bg-color: #1B1B1B;
 $button-bg: #2b3938;
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url('https://fonts.cdnfonts.com/css/segoe-ui-4') format('woff2'),
+    url('https://fonts.cdnfonts.com/css/segoe-ui-4') format('woff');
+}
+
+
 body {
     background-color: #1B1B1B;
     color: #ffffff;
-    font-family: "Segoe UI";
+    font-family: 'Noto Sans', sans-serif;
 }
+
+strong{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .breadcrumb{
     color: #000000;
     background-color: #E2A446;
