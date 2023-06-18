@@ -125,8 +125,28 @@ p {
   border-bottom-right-radius: 15px;
   border-width: 2px;
   border-color: #e2a446;
+  /* Set maximum width and height for the card box */
+  /* Add padding or margin if desired */
+  /* Enable scrolling if the content exceeds the container's dimensions */
+  overflow: auto;
 }
 
+/* Media query for narrower screens */
+@media (max-width: 1500px) {
+  .card_box {
+    /* Styles for narrower screens */
+    height: 250px;
+    /* Other styles... */
+  }
+}
+/* Media query for narrower screens */
+@media (max-width: 1000px) {
+  .card_box {
+    /* Styles for narrower screens */
+    height: 300px;
+    /* Other styles... */
+  }
+}
 .card-img {
   height: 100%;
   max-height: 100%;

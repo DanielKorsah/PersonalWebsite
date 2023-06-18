@@ -150,6 +150,32 @@ p{
     border-bottom-right-radius: 15px;
     border-width: 2px;
     border-color: #e2a446;
+
+    /* Set maximum width and height for the card box */
+    //max-width: 300px;
+    //max-height: 250px;
+    /* Add padding or margin if desired */
+    //padding: 20px;
+    /* Enable scrolling if the content exceeds the container's dimensions */
+    overflow: auto;
+}
+
+/* Media query for narrower screens */
+@media (max-width: 1500px) {
+    .card_box {
+        /* Styles for narrower screens */
+        height: 250px;
+        /* Other styles... */
+    }
+}
+
+/* Media query for narrower screens */
+@media (max-width: 1000px) {
+    .card_box {
+        /* Styles for narrower screens */
+        height: 300px;
+        /* Other styles... */
+    }
 }
 
 .card-img {
@@ -184,6 +210,8 @@ p{
     border-width: 0;  // Set all border widths to 0...
     border-left-width: 5px;  // ...but make the right border 5px
     border-color: #1B1B1BFF;  // Set border color to orange
+
+
 }
 
 .textCentre{
