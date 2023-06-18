@@ -43,6 +43,10 @@ ul{
     margin-left: 20px; /* key property */
 }
 
+ol{
+    margin-block: 0;
+}
+
 li{
     text-align: left;
 }
@@ -126,24 +130,35 @@ p{
     //border-style: solid;
     border-radius: 15px;
     height: 200px;
+
+    border-style: solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-width: 2px;
+    border-color: #e2a446;
 }
 
-.card-img{
+.card-img {
     height: 100%;
     max-height:100%;
     max-width: 27%;
     float: left;
     margin-left: 0;
-    border-color: blue;
-    border-style: inherit;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-color: #1b1b1b;
+
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+
+
 }
+
+
 
 .card-text{
     min-height: 100%;
@@ -151,7 +166,12 @@ p{
     float: left;
     background-color: rgba(244, 234, 230, 0);
     border-color: green;
-    border-style: inherit;
+
+    border-style: solid;  // changed from 'inherit'
+    border-color: blue;  // You can remove this if you don't want a blue border
+    border-width: 0;  // Set all border widths to 0...
+    border-left-width: 5px;  // ...but make the right border 5px
+    border-color: #1B1B1BFF;  // Set border color to orange
 }
 
 .textCentre{
@@ -282,5 +302,9 @@ p{
 .arrow-up:after {
     top: -15px;
     border-bottom: 15px solid #2b3938;
+}
+
+#unity-container{
+    margin-top: 50px;
 }
 
